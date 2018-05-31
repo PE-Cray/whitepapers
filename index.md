@@ -6,9 +6,11 @@ that are related to Cray Programming Environments softwares.
 
 **MPI Dynamic Process Management**
 
-This document describes the use of MPI Dynamic Process Management or DPM. This includes _MPI\_Comm\_spawn_, _MPI\_Comm\_connect_, _MPI\_Comm\_accept_ and related DPM functionality, as well as a Cray extension, _MPIX\_Comm\_rankpool_.
+This document describes the use of MPI Dynamic Process Management or DPM. This
+includes _MPI\_Comm\_spawn_, _MPI\_Comm\_connect_, _MPI\_Comm\_accept_ and
+related DPM functionality, as well as a Cray extension, _MPIX\_Comm\_rankpool_.
 
-[Download](https://github.com/PE-Cray/whitepapers/raw/master/mpt/mpi-spawn.doc)
+[Download MPI Dynamic Process Management Whitepaper](https://github.com/PE-Cray/whitepapers/raw/master/mpt/mpi-spawn.doc)
 
 ### Cray OpenSHMEMX
 
@@ -29,5 +31,5 @@ overview of the implementation along with the usage details, functional
 differences and performance optimizations over the existing Cray SHMEM
 implementation.
 
-[Download](https://github.com/PE-Cray/whitepapers/raw/master/cray-openshmemx/introducing-cray-openshmemx.doc)
+[Download Introducing Cray OpenSHMEMX Whitepaper](https://github.com/PE-Cray/whitepapers/raw/master/cray-openshmemx/introducing-cray-openshmemx.doc)
 
