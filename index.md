@@ -2,16 +2,18 @@
 This repository contains whitepapers with in-depth report on specific topics
 that are related to Cray Programming Environments softwares.
 
-## Message Passing Toolkit
+### Message Passing Toolkit
 
-[**MPI Dynamic Process Management**](https://github.com/PE-Cray/whitepapers/raw/master/mpt/mpi-spawn.doc)
-This document describes the use of MPI Dynamic Process Management or DPM. This
-includes _MPI\_Comm\_spawn_, _MPI\_Comm\_connect_, _MPI\_Comm\_accept_ and
-related DPM functionality, as well as a Cray extension, _MPIX\_Comm\_rankpool_.
+**MPI Dynamic Process Management**
 
-## Cray OpenSHMEMX
+This document describes the use of MPI Dynamic Process Management or DPM. This includes _MPI\_Comm\_spawn_, _MPI\_Comm\_connect_, _MPI\_Comm\_accept_ and related DPM functionality, as well as a Cray extension, _MPIX\_Comm\_rankpool_.
 
-[**Introducing Cray OpenSHMEMX**](https://github.com/PE-Cray/whitepapers/raw/master/cray-openshmemx/introducing-cray-openshmemx.doc)
+[Download](https://github.com/PE-Cray/whitepapers/raw/master/mpt/mpi-spawn.doc)
+
+### Cray OpenSHMEMX
+
+**Introducing Cray OpenSHMEMX**
+
 OpenSHMEM is a Partitioned Global Address Space (PGAS) library interface
 specification, which is the culmination of a standardization effort among many
 implementers and users of SHMEM programming model. SHMEM has a long history as
@@ -26,4 +28,6 @@ implementation Cray OpenSHMEMX. In this paper, we provide a brief design
 overview of the implementation along with the usage details, functional
 differences and performance optimizations over the existing Cray SHMEM
 implementation.
+
+[Download](https://github.com/PE-Cray/whitepapers/raw/master/cray-openshmemx/introducing-cray-openshmemx.doc)
 
