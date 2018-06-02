@@ -26,7 +26,7 @@ SHMEM implementation for Cray XC and XK systems is called Cray SHMEM. Cray SHMEM
 is a proprietary SHMEM implementation from Cray Inc., which is OpenSHMEM
 standard compliant. In this paper, we introduce the next generation OpenSHMEM
 implementation for current and future generation Cray systems. We call this new
-implementation Cray OpenSHMEMX. In this paper, we provide a brief design
+implementation **Cray OpenSHMEMX**. In this paper, we provide a brief design
 overview of the implementation along with the usage details, functional
 differences and performance optimizations over the existing Cray SHMEM
 implementation.
