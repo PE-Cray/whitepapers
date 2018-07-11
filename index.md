@@ -33,3 +33,33 @@ implementation.
 
 [Download Introducing Cray OpenSHMEMX Whitepaper](https://github.com/PE-Cray/whitepapers/raw/master/cray-openshmemx/introducing-cray-openshmemx.doc)
 
+**Updating Cray Thread-Hot Semantics for OpenSHMEM v1.4**
+
+Cray OpenSHMEMX is a proprietary SHMEM implementation which is OpenSHMEM
+compliant and includes Cray specific features as part of SHMEMX prefixed
+routines. One such feature is the Cray Thread-Hot which improves the performance
+of multi-threaded applications where more than one thread issues Puts, Gets or
+Atomic Memory Operations (AMOs) using standard SHMEM routines. Support for
+multi-threading and OpenSHMEM Communication Context management features were
+introduced in OpenSHMEM specification version 1.4. In this work, we provide a
+brief overview of the updates made to the Cray Thread-Hot implementation to
+coexist with OpenSHMEM v1.4 multi-threading and OpenSHMEM Communication Contexts
+features
+
+[Download Updating Cray Thread-Hot Semantics for OpenSHMEM v1.4 Whitepaper](https://github.com/PE-Cray/whitepapers/raw/master/cray-openshmemx/cray-openshmemx-thread-hot.doc)
+
+**Cray OpenSHMEMX (SMP-DMAPP) on Different CLE Versions**
+
+Cray OpenSHMEMX is a proprietary SHMEM implementation which is OpenSHMEM
+version 1.4 compliant. Cray OpenSHMEMX build over DMAPP and XPMEM as
+communication layers – DMAPP for inter-node operations and XPMEM intra-node
+operations. We call this communication layer combination as SMP-DMAPP. In this
+work, we provide detailed information on using Cray OpenSHMEMX with SMP-DMAPP
+communication layer on different Cray Linux Environment (CLE) operating system
+releases for Cray systems.
+
+**NOTE:** The usage steps discussed in this work are relevant only for
+Cray OpenSHMEMX version/8.0.1 and later. And, it is relevant only for SMP-DMAPP
+communication layer based Cray OpenSHMEMX builds.
+
+[Download Cray OpenSHMEMX (SMP-DMAPP) on Different CLE Versions Whitepaper](https://github.com/PE-Cray/whitepapers/raw/master/cray-openshmemx/cray-openshmemx-usage.doc)
