@@ -1,0 +1,27 @@
+Name: rocm-4.0.0
+Version: 4.0.0
+Description: ROCm 4.0.0
+
+#
+# "rocm-4.0.0.pc" pkg-config file
+#
+# pkg-config file example template for ROCm 4.0.0
+#
+# our path for this example pkg-config file is "/opt/modulefiles/rocm/rocm-4.0.0.pc"
+#
+# we place both the "4.0.0" modulefile and the "rocm-4.0.0.pc" file in same "/opt/modulefiles/rocm" dir
+#
+# works alongside the "rocm/4.0.0" environment modulefile
+#
+# must modify paths below to match your ROCm install
+#
+
+rocm_pre=/opt/rocm-4.0.0
+
+#
+# {rocm_pre}/include path includes many links to subdirs such as hip/include etc
+#
+
+Cflags: -I${rocm_pre}/include -I${rocm_pre}/rocprofiler/include -D_HIP_PLATFORM_HCC_
+
+Libs: -L${rocm_pre}/lib -L${rocm_pre}/lib64 -lamdhip64

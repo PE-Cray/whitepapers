@@ -1,0 +1,22 @@
+Name: cudatoolkit
+Version: 11.0
+Description: NVIDIA cudatoolkit
+
+#
+# ctk-11.0.pc
+#
+# pkg-config file template for CTK 11.0
+#
+# works alongside the cudatoolkit/11.0 environment modulefile
+#
+# modify cu_base cu_math cu_nvvm cu_cupt to match CTK install paths
+#
+
+cu_base=/opt/nvidia/hpc_sdk/Linux_x86_64/20.9/cuda/11.0
+cu_math=/opt/nvidia/hpc_sdk/Linux_x86_64/20.9/math_libs/11.0
+cu_nvvm=/opt/nvidia/hpc_sdk/Linux_x86_64/20.9/cuda/11.0/nvvm
+cu_cupt=/opt/nvidia/hpc_sdk/Linux_x86_64/20.9/cuda/11.0/extras/CUPTI
+
+Cflags: -I${cu_base}/include -I${cu_cupt}/include -I${cu_nvvm}/include
+
+Libs: -L${cu_base}/lib64 -L${cu_cupt}/lib64 -L${cu_nvvm}/lib64 -Wl,--as-needed,-lcupti,-lcudart,--no-as-needed -lcuda

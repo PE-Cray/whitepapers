@@ -1,0 +1,42 @@
+#%Module
+
+#
+# cudatoolkit/11.0
+#
+# modulefile template for CTK 11.0
+# 
+# sample path for this file: /opt/nvidia/modulefiles/cudatoolkit/11.0
+#
+# modify PKG_CONFIG_PATH with dir with corresponding 'ctk-11.0.pc' pkg-config file
+#
+# modify cu_base cu_math cu_nvvm cu_cupt to match CTK install paths
+#
+
+conflict "cudatoolkit"
+
+set cu_prefix "/opt/nvidia/hpc_sdk/Linux_x86_64/20.9"
+
+# check these paths in the CTK SDK install
+set cu_base "$cu_prefix/cuda/11.0"
+set cu_math "$cu_prefix/math_libs/11.0"
+set cu_nvvm "$cu_prefix/cuda/11.0/nvvm"
+set cu_cupt "$cu_prefix/cuda/11.0/extras/CUPTI"
+
+setenv cudatoolkit_VERSION "11.0"
+
+setenv CRAY_CUDATOOLKIT_VERSION "11.0"
+
+#
+# we add "ctk-x.x" to PE_PKGCONFIG_LIBS to match our corresponding "ctk-x.x.pc" file prefix
+#
+
+prepend-path PE_PKGCONFIG_LIBS "ctk-11.0"
+
+#
+# we modify PKG_CONFIG_PATH with dir with corresponding ctk-11.0.pc pkg-config file
+#
+
+prepend-path PKG_CONFIG_PATH "/opt/nvidia/modulefiles/cudatoolkit"
+
+prepend-path LD_LIBRARY_PATH "$cu_base/lib64:$cu_math/lib64:$cu_cupt/lib64:$cu_nvvm/lib64"
+prepend-path PATH "$cu_base/bin"

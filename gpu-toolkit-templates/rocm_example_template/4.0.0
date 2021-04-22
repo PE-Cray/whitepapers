@@ -1,0 +1,36 @@
+#%Module
+
+#
+# "rocm/4.0.0" modulefile
+#
+# modulefile example template for ROCm 4.0.0
+#
+# our path for this modulefile example is "/opt/modulefiles/rocm/4.0.0"
+#
+# we place both the "4.0.0" modulefile and the "rocm-4.0.0.pc" file in the same "/opt/modulefiles/rocm" dir
+#
+# must prepend-path PKG_CONFIG_PATH with dir for corresponding "rocm-4.0.0.pc" pkg-config file
+#
+# must modify or check paths below to match your ROCm install
+#
+
+set             rocm_pre        "/opt/rocm-4.0.0"
+
+setenv          ROCM_PATH       "$rocm_pre"
+setenv          HIP_PATH        "$rocm_pre/hip"
+setenv          HIP_LIB_PATH    "$rocm_pre/hip/lib"
+setenv          HSA_PATH        "$rocm_pre/hsa"
+prepend-path    LD_LIBRARY_PATH "$rocm_pre/lib:$rocm_pre/lib64:$rocm_pre/hsa/lib"
+prepend-path    PATH            "$rocm_pre/bin:$rocm_pre/hip/bin"
+
+#
+# we add "rocm-x.x.x" to PE_PKGCONFIG_LIBS to match our corresponding "rocm-x.x.x.pc" file prefix
+#
+
+prepend-path    PE_PKGCONFIG_LIBS "rocm-4.0.0"
+
+#
+# we must prepend PKG_CONFIG_PATH here with our dir containing the "rocm-x.x.x.pc" file
+#
+
+prepend-path    PKG_CONFIG_PATH "/opt/modulefiles/rocm"
