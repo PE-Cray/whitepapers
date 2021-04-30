@@ -1,0 +1,22 @@
+Name: cudatoolkit
+Version: 11.2
+Description: NVIDIA cudatoolkit
+
+#
+# ctk-11.2.pc
+#
+# pkgconfig file template for CTK 11.2
+#
+# sample path for this file: /usr/share/Modules/modulefiles/cudatoolkit/ctk-11.2.pc
+#
+# works alongside /usr/share/Modules/modulefiles/cudatoolkit/11.2 modulefile
+#
+# modify cu_base cu_math cu_nvvm cu_cupt to match CTK install paths
+#
+
+cu_base=/usr/local/cuda-11.2
+cu_math=/usr/local/cuda-11.2
+cu_nvvm=/usr/local/cuda-11.2/nvvm
+cu_cupt=/usr/local/cuda-11.2
+Cflags: -I${cu_base}/include -I${cu_cupt}/include -I${cu_nvvm}/include
+Libs: -L${cu_base}/lib64 -L${cu_cupt}/lib64 -L${cu_nvvm}/lib64 -Wl,--as-needed,-lcupti,-lcudart,--no-as-needed -lcuda

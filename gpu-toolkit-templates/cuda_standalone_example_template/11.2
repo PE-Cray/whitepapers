@@ -1,0 +1,41 @@
+#%Module
+
+#
+# cudatoolkit/11.2
+#
+# modulefile template for CTK 11.2
+#
+# sample path for this file: /usr/share/Modules/modulefiles/cudatoolkit/11.2
+#
+# modify PKG_CONFIG_PATH with dir containing related 'ctk-11.2.pc' file
+#
+# modify cu_base cu_math cu_nvvm cu_cupt to match CTK install paths
+#
+
+set cu_base "/usr/local/cuda-11.2"
+set cu_math "/usr/local/cuda-11.2"
+set cu_nvvm "/usr/local/cuda-11.2/nvvm"
+set cu_cupt "/usr/local/cuda-11.2"
+
+setenv cudatoolkit_VERSION "11.2"
+
+setenv CRAY_CUDATOOLKIT_VERSION "11.2"
+
+conflict "cudatoolkit"
+
+#
+# we add "ctk-x.x" to PE_PKGCONFIG_LIBS to match our corresponding "ctk-x.x.pc" file prefix
+#
+
+prepend-path PE_PKGCONFIG_LIBS "ctk-11.2"
+
+#
+# we modify PKG_CONFIG_PATH with dir with corresponding ctk-11.2.pc pkg-config file
+#
+
+prepend-path PKG_CONFIG_PATH "/usr/share/Modules/modulefiles/cudatoolkit"
+
+prepend-path LD_LIBRARY_PATH "$cu_base/lib64:$cu_math/lib64:$cu_cupt/lib64:$cu_nvvm/lib64"
+
+prepend-path PATH "$cu_base/bin"
+
