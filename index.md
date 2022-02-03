@@ -12,6 +12,16 @@ related DPM functionality, as well as a Cray extension, _MPIX\_Comm\_rankpool_.
 
 [Download MPI Dynamic Process Management Whitepaper](https://github.com/PE-Cray/whitepapers/raw/master/mpt/mpi-spawn.doc)
 
+
+**MPICH ABI Compatibility Status for HPE Cray EX Systems**
+
+<p align="justify">
+This document describes ANL MPICH ABI Compatibility on HPE Cray EX systems and how to use this capability.
+</p>
+
+[Download MPICH ABI Compatibility Status for HPE Cray EX Systems](https://github.com/PE-Cray/whitepapers/raw/master/mpt/ABI_Compat_white_paper_ex.doc)
+
+
 ### Cray OpenSHMEMX
 
 **Introducing Cray OpenSHMEMX**
